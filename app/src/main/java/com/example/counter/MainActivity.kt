@@ -14,7 +14,6 @@ class MainActivity : AppCompatActivity() {
             number++
             displayNumber(number)
         }
-        displayNumber(number)
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
@@ -30,6 +29,7 @@ class MainActivity : AppCompatActivity() {
         val text = savedInstanceState.getString("text")
         val count:TextView = findViewById(R.id.number)
         count.text = text
+        displayNumber(number)
     }
 
     private fun displayNumber(number: Int) {
